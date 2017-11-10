@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">  
+<endpoint 
+    name="TagSoapService" 
+    implementation="be.steformations.pc.service.contacts.soap.implementations.TagSoapServiceImpl"  
+    url-pattern="/ws/TagSoapService"  />
+    
+<endpoint 
+    name="CountrySoapService" 
+    implementation="be.steformations.pc.service.contacts.soap.implementations.CountrySoapServiceImpl"  
+    url-pattern="/ws/CountrySoapService"  />
+    
+<endpoint 
+    name="ContactSoapService" 
+    implementation="be.steformations.pc.service.contacts.soap.implementations.ContactSoapServiceImpl"  
+    url-pattern="/ws/ContactSoapService"  />
+</endpoints>  

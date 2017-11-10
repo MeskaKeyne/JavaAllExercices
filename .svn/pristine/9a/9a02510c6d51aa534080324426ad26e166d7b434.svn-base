@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-run"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="dependencies/eclipselink_jpa_2.1.jar"/>
+	<classpathentry kind="lib" path="dependencies/javax.persistence-2.1.0.jar"/>
+	<classpathentry kind="lib" path="dependencies/pc-chesspuzzle-jpa-.jar"/>
+	<classpathentry kind="lib" path="dependencies/sqlite-jdbc-3.8.7.jar"/>
+	<classpathentry kind="lib" path="dependencies/pc-chesspuzzle-dto.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

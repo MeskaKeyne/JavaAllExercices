@@ -1,0 +1,49 @@
+.header {
+	margin-top: 10px;
+	margin-left: 40px;	
+}
+
+.content {
+	margin: 30px;
+	padding: 15px;
+}
+
+.title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-size: 20px;
+	font-weight: bold;	
+}
+
+.liste-livre {
+	width: 40%;
+	float: left;
+}
+
+.liste-auteur {
+	width: 15%;
+	float: left;
+}
+
+.liste-collection {
+	width: 10%;
+	float: left;
+}
+
+hr {
+	margin-top: 10px;
+	width: 50%;
+}
+
+label {
+	width: 150px;
+    float: left;
+}
+
+.overflow {
+	overflow: hidden;
+	margin-bottom: 5px;
+}

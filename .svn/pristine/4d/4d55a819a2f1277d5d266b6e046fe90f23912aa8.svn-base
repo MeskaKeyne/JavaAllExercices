@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<g:HTMLPanel>
+		<g:FlowPanel ui:field="panel"> <!-- ui:field => nom de la variable associée -->
+			<g:TextBox ui:field="nameInput"/>
+			<g:Button ui:field="goButton" text="go"/>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

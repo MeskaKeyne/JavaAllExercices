@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	
+	<!-- instanciation d'un singleton 
+		id="calculManager" => setCalculManager()
+	-->
+	<bean id="calculManager" 
+		class="be.steformations.pc.javaweb.calcul.modele.GestionnaireCalcul">
+		<constructor-arg index="0" value="15" />	
+	</bean>
+	
+</beans>

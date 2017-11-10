@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.1">
+    
+	<persistence-unit name="chesspuzzle_sqlite3">
+	
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite::resource:data/chesspuzzle-sqlite3.db"/>
+			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+			<property name="javax.persistence.jdbc.user" value=""/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="eclipselink.logging.level" value="FINE"/>
+		</properties>
+
+	</persistence-unit>
+	
+	<persistence-unit name="chesspuzzle_postgresql">
+	
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/chesspuzzles"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="postgres"/>
+			<property name="eclipselink.logging.level" value="FINE"/>
+		</properties>
+
+	</persistence-unit>
+	
+</persistence>

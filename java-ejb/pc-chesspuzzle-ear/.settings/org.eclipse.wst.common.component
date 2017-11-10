@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="pc-chesspuzzle-ear">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-service.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-service/pc-chesspuzzle-ejb-service">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-jpa-.jar" deploy-path="/lib" handle="module:/classpath/lib/pc-chesspuzzle-dao/archives/pc-chesspuzzle-jpa-.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-dto.jar" deploy-path="/lib" handle="module:/classpath/lib/pc-chesspuzzle-dto/archives/pc-chesspuzzle-dto.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-soap-service.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-soap-service/pc-chesspuzzle-ejb-soap-service">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-rest-service.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-rest-service/pc-chesspuzzle-ejb-rest-service">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-jsf.war" deploy-path="/" handle="module:/resource/pc-chesspuzzle-jsf/pc-chesspuzzle-jsf">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-jms-service.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-jms-service/pc-chesspuzzle-ejb-jms-service">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-mail-sender.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-mail-sender/pc-chesspuzzle-ejb-mail-sender">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-jobs.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-jobs/pc-chesspuzzle-ejb-jobs">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pc-chesspuzzle-ejb-programmed-jobs.jar" deploy-path="/" handle="module:/resource/pc-chesspuzzle-ejb-programmed-jobs/pc-chesspuzzle-ejb-programmed-jobs">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

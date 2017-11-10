@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+
+<ui:composition template="inc/modele.xhtml">
+
+	<ui:define name="titre2"><h:outputText value="#{i18n.titre_recherche}"/></ui:define>
+	<ui:define name="navigation">
+		<h:outputLink value="menu.xhtml" ><h:outputText value="#{i18n.lien_menu}"/></h:outputLink>
+	</ui:define>
+
+	<ui:define name="corps">
+		<div>
+			<div style="float: left;">
+				<h:form>
+					<p><label><h:outputText value="#{i18n.form_recherche_auteur}"/></label> 
+						<h:selectOneMenu value="#{searchCriteria.authorId}" >
+							<f:selectItem itemValue="0" itemLabel="#{i18n.liste_tous}" />
+							<f:selectItems value="#{service.authors}" var="a" itemValue="#{a.id}" itemLabel="#{a.prenom} #{a.nom}" />
+						</h:selectOneMenu> 
+					</p>
+					<p><label><h:outputText value="#{i18n.form_recherche_collection}"/></label> 
+						<h:selectOneMenu value="#{searchCriteria.editorId}" >
+							<f:selectItem itemValue="0" itemLabel="#{i18n.liste_toutes}" />
+							<f:selectItems value="#{service.editors}" var="e" itemValue="#{e.id}" itemLabel="#{e.nom}"/>
+						</h:selectOneMenu>
+					</p>	
+					<p><label><h:outputText value="#{i18n.form_recherche_titre}"/></label>  
+						<h:inputText value="#{searchCriteria.pattern}" /> </p>
+					<p> <h:commandButton value="#{i18n.bouton_recherche}" action="#{search.execute}"/> </p>
+				
+				</h:form>
+			</div>
+			<div style="float: left; margin-left: 20%;">
+
+				<p><h:outputText value="#{i18n.pas_de_resultat}" rendered="#{searchResults.initialized and empty searchResults.books}"/></p>
+				
+				<h:panelGroup rendered="#{not empty searchResults.books}">
+					<p><h:outputText value="#{i18n.titre_resultat}"/></p>
+					<ul>
+					<ui:repeat var="book" value="#{searchResults.books}">
+						<li>
+							<h:outputText value='"#{book.titre}"' />
+							<h:panelGroup rendered="#{book.available}">
+								<h:form style="display: inline;">
+									<h:commandLink action="#{addBooking.execute}" value="#{i18n.lien_reserver}">
+										<f:param name="id" value="#{book.code}" />
+									</h:commandLink>
+								</h:form>
+							</h:panelGroup>
+						</li>
+					</ui:repeat>
+					</ul>
+				</h:panelGroup>
+
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>
+
+</h:body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title><h:outputText value="#{b.titre}"/></title>
+	<h:outputStylesheet library="css" name="biblio.css" />
+</h:head>
+
+<!-- détermine la langue qui sera utilisée dans la facelet -->
+<f:view locale="#{languageChoice.locale}">
+
+<h:body>
+
+	<h1><h:outputText value="#{i18n.titre}"/> <!-- valeur de la clef titre du fichier de traduction correspondant à la langue courante -->
+	
+		<a href="http://www.oracle.com/technetwork/java/index.html">
+				<h:graphicImage library="images" name="java-icon.png" style="vertical-align: bottom;" />
+		</a>
+	</h1>
+
+	<fieldset>
+	
+	<legend><ui:insert name="titre2">titre2</ui:insert></legend>
+	
+	<p><ui:insert name="navigation"/></p>
+	
+	<div><ui:insert name="corps">corps</ui:insert></div>
+
+	</fieldset>
+
+<div>  
+	<h:form>
+		<!-- "languageChoice.setLocale()" est invoquée lors de la sélection d'un des boutons radio -->
+		<h:selectOneRadio value="#{languageChoice.locale}" onchange="submit()"> 
+			<f:selectItems value="#{languageChoice.availableLocales}" />
+		</h:selectOneRadio>
+	</h:form>	
+</div>
+
+</h:body>
+</f:view>
+</html>

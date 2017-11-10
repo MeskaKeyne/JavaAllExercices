@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="inc/modele.xhtml">
+
+	<ui:define name="titre2"><h:outputText value="#{i18n.titre_reservation}"/></ui:define>
+	<ui:define name="navigation">
+		<h:outputLink value="menu.xhtml"><h:outputText value="#{i18n.lien_menu}"/></h:outputLink>
+	</ui:define>
+
+	<ui:define name="corps">
+		<fieldset>
+		<h:panelGroup rendered="#{not empty connection.user.bookings}">
+			<ul>
+				<ui:repeat var="r" value="#{connection.user.bookings}">
+					<li>
+						<h:outputText value='"#{r.livre.titre}" #{i18n.reservation_cheville} '/>
+						<h:outputText value="#{r.dateDeReservation}" >
+              				<f:convertDateTime dateStyle="full" type="date" />
+ 						</h:outputText>
+						<h:form style="display: inline;">
+							<h:commandLink action="#{deleteBooking.execute}" value="#{i18n.lien_annuler_reservation}">
+								<f:param name="id" value="#{r.id}" />
+							</h:commandLink>
+						</h:form>
+					</li>
+				</ui:repeat>
+			</ul>
+		</h:panelGroup>
+		<h:panelGroup rendered="#{empty connection.user.bookings}">
+			<h:outputText value="#{i18n.pas_de_reservation}"/>
+		</h:panelGroup>
+		</fieldset>
+	</ui:define>
+
+</ui:composition>
+
+</html>

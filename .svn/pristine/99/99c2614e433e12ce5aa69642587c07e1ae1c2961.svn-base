@@ -1,0 +1,55 @@
+GET /employe/{id}
+	
+	output: 1 employe sous format XML/JSON ou 404
+		
+GET /employe/{firstnameOrLogin}/{nameOrPassword}
+
+	output: 1 employe sous format XML/JSON ou 404
+	
+GET /employe
+
+	output: tous les employes sous format XML/JSON 
+	
+GET /project/{id}
+
+	output: 1 projet sous format XML/JSON ou 404
+	
+GET /project/{name}
+
+	output: 1 projet sous format XML/JSON ou 404
+	
+GET /project/manager/{id}
+
+	output: tous les projets d'un manager sous format XML/JSON
+	
+GET /project
+
+	output: tous les projets sous format XML/JSON
+	
+GET /prestation/{id}
+
+	output: 1 prestation sous format XML/JSON ou 404
+	
+GET /prestation/employee/{id}
+
+	output: toutes les prestations d'un employe sous format XML/JSON
+	
+GET /prestation/project/{id}
+
+	output: toutes les prestations d'un projet sous format XML/JSON
+	
+POST /prestation
+
+	input: x-www-form-urlencoded
+	output: 1 prestation sous format XML/JSON ou 204 (NO CONTENT)
+	
+POST /prestation
+
+	input: XML/JSON
+	output: 1 prestation sous format XML/JSON ou 204 (NO CONTENT)
+	
+DELETE /prestation/{id}
+
+	output: 1 prestation sous format XML/JSON ou 404
+	
+	

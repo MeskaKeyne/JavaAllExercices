@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+	version="2.0">
+	
+	<access>FIELD</access> <!-- utilisation ou des setters (PROPERTY) des classes des entités -->
+	
+	<entity class="be.steformations.java_data.pc.conjugaison_fr.dao.jpa.entities.VerbeEntity" name="Verbe">
+		<table name="verbe_view" />
+		<attributes>
+			<id name="id" />
+			<basic name="infinitif"/>
+			<basic name="radical"/>
+			<basic name="participe"/>
+			<basic name="auxiliaire"/>
+			<many-to-one name="modeleAsEntity">
+				<join-column name="modele"/>
+			</many-to-one>
+			<transient name="modele"/>
+		</attributes>
+	</entity>
+	
+	<entity class="be.steformations.java_data.pc.conjugaison_fr.dao.jpa.entities.ConjugaisonEntity" name="Conjugaison">
+		<table name="conjugaison_view"/>
+		<attributes>
+			<id name="id"/>
+			<basic name="mode"/>
+			<basic name="temps"/>
+			<basic name="personne"/>
+			<basic name="valeur"/>
+			<many-to-one name="verbeEntity">
+				<join-column name="verbe"/>
+			</many-to-one>
+			<transient name="verbe"/>
+		</attributes>
+	</entity>
+</entity-mappings>

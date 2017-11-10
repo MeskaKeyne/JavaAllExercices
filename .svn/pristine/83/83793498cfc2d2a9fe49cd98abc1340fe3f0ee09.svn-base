@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+<managed-bean>
+	<managed-bean-name>jsfGestionnaireCalcul</managed-bean-name>
+	<managed-bean-class>be.steformations.pc.javaweb.jsf.calcul.modele.JsfGestionnaireCalcul</managed-bean-class>
+	<managed-bean-scope>application</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>sessionCalcul</managed-bean-name>
+	<managed-bean-class>be.steformations.pc.javaweb.jsf.calcul.session.SessionCalcul</managed-bean-class>
+	<managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>generer</managed-bean-name>
+	<managed-bean-class>be.steformations.pc.javaweb.jsf.calcul.controleurs.Generer</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+	<managed-property>
+		<property-name>jsfGestionnaireCalcul</property-name>
+		<value>#{jsfGestionnaireCalcul}</value>
+	</managed-property>
+	<managed-property>
+		<property-name>sessionCalcul</property-name>
+		<value>#{sessionCalcul}</value>
+	</managed-property>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>verifier</managed-bean-name>
+	<managed-bean-class>be.steformations.pc.javaweb.jsf.calcul.controleurs.Verifier</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+	<managed-property>
+		<property-name>jsfGestionnaireCalcul</property-name>
+		<value>#{jsfGestionnaireCalcul}</value>
+	</managed-property>
+	<managed-property>
+		<property-name>sessionCalcul</property-name>
+		<value>#{sessionCalcul}</value>
+	</managed-property>
+</managed-bean>
+
+</faces-config>

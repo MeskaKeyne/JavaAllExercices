@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="inc/modele.xhtml">
+
+	<ui:define name="titre2"><h:outputText value="#{i18n.titre_menu}"/> </ui:define>
+	
+	<ui:define name="corps">
+		<p><h:outputText value="#{i18n.salutation} #{connection.user.prenom} #{connection.user.nom}"/></p>
+		<p><h:outputLink value="recherche.xhtml"><h:outputText value="#{i18n.lien_recherche}"/></h:outputLink></p>
+		<p><h:outputLink value="reservations.xhtml"><h:outputText value="#{i18n.lien_reservation}"/></h:outputLink></p>
+	</ui:define>
+	
+</ui:composition>
+ 
+</html>

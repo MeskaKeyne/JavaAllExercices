@@ -1,0 +1,8 @@
+BODY {color: darkblue}
+IMG {border: none}
+.livresFormLabel {
+	float: left;
+	display: inline-block;
+	width: 100px;
+	color: red;
+}

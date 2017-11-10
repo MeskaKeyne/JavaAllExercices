@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+    <application>
+	
+        <!-- definition de la langue par défaut pour les traductions -->
+		<locale-config>
+			<default-locale>fr</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+	
+		<!-- définition des ressources pour les traductions -->
+		<resource-bundle>
+		    
+		    <!-- qualified name vers les fichiers properties contenant les traductions
+		    (sans l'extension de langue ni l'extension de fichier) -->
+			<base-name>be.steformations.pc.javaweb.jsf.biblio.i18n.translations.messages</base-name>
+			
+			<!-- nom de variable utilisé dans les fichiers xhtml pour accèder à une traduction selon sa clef 
+				ex: i18n.titre => la valeur de la clef "titre" dans le fichier de traduction correspondant à la langue (java.util.Locale) courante
+			-->
+			<var>i18n</var>
+		</resource-bundle>
+	
+	</application>
+
+</faces-config>
